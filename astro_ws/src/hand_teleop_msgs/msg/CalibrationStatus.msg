@@ -1,0 +1,4 @@
+string state
+float32 progress
+float32 distance_forward
+float32 distance_lateral

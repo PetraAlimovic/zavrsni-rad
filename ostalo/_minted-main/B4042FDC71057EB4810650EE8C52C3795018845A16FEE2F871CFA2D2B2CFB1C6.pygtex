@@ -1,0 +1,7 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{n}{Initialize} \PYG{n}{RealSense} \PYG{n}{pipeline} \PYG{p}{(}\PYG{n}{Color} \PYG{o}{\PYGZam{}} \PYG{n}{Depth} \PYG{o}{@} \PYG{l+m+mi}{640}\PYG{n}{x480}\PYG{p}{,} \PYG{l+m+mi}{30}\PYG{n}{fps}\PYG{p}{)}
+\PYG{n}{Initialize} \PYG{n}{MediaPipe} \PYG{n}{Hands} \PYG{n}{model} \PYG{p}{(}\PYG{n}{min\PYGZus{}detection\PYGZus{}confidence}\PYG{p}{,} \PYG{n}{max\PYGZus{}num\PYGZus{}hands}\PYG{o}{=}\PYG{l+m+mi}{1}\PYG{p}{)}
+
+\PYG{n}{Create} \PYG{n}{Timer}\PYG{p}{(}\PYG{l+m+mi}{1}\PYG{o}{/}\PYG{l+m+mi}{30}\PYG{n}{s}\PYG{p}{)} \PYG{o}{\PYGZhy{}\PYGZgt{}} \PYG{n}{camera\PYGZus{}loop}\PYG{p}{()}
+\PYG{n}{Create} \PYG{n}{Timer}\PYG{p}{(}\PYG{l+m+mi}{1}\PYG{o}{/}\PYG{l+m+mi}{20}\PYG{n}{s}\PYG{p}{)} \PYG{o}{\PYGZhy{}\PYGZgt{}} \PYG{n}{publish\PYGZus{}latest\PYGZus{}state}\PYG{p}{()}
+\end{Verbatim}

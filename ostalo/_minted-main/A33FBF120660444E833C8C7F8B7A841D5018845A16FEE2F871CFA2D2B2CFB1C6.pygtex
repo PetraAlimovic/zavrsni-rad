@@ -1,0 +1,14 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+  \PYG{n}{function} \PYG{n}{update\PYGZus{}and\PYGZus{}publish}\PYG{p}{():}
+        \PYG{n}{current\PYGZus{}time} \PYG{o}{=} \PYG{n}{Current\PYGZus{}Time}\PYG{p}{()}
+        \PYG{n}{dt} \PYG{o}{=} \PYG{n}{current\PYGZus{}time} \PYG{o}{\PYGZhy{}} \PYG{n}{last\PYGZus{}time}
+        \PYG{n}{last\PYGZus{}time} \PYG{o}{=} \PYG{n}{current\PYGZus{}time}
+
+        \PYG{n}{delta\PYGZus{}x}  \PYG{o}{=} \PYG{n}{state}\PYG{o}{.}\PYG{n}{vx} \PYG{o}{*} \PYG{n}{Cosine}\PYG{p}{(}\PYG{n}{state}\PYG{o}{.}\PYG{n}{th}\PYG{p}{)} \PYG{o}{*} \PYG{n}{dt}
+        \PYG{n}{delta\PYGZus{}y}  \PYG{o}{=} \PYG{n}{state}\PYG{o}{.}\PYG{n}{vx} \PYG{o}{*} \PYG{n}{Sine}\PYG{p}{(}\PYG{n}{state}\PYG{o}{.}\PYG{n}{th}\PYG{p}{)} \PYG{o}{*} \PYG{n}{dt}
+        \PYG{n}{delta\PYGZus{}th} \PYG{o}{=} \PYG{n}{state}\PYG{o}{.}\PYG{n}{wz} \PYG{o}{*} \PYG{n}{dt}
+
+        \PYG{n}{state}\PYG{o}{.}\PYG{n}{x}  \PYG{o}{+=} \PYG{n}{delta\PYGZus{}x}
+        \PYG{n}{state}\PYG{o}{.}\PYG{n}{y}  \PYG{o}{+=} \PYG{n}{delta\PYGZus{}y}
+        \PYG{n}{state}\PYG{o}{.}\PYG{n}{th} \PYG{o}{+=} \PYG{n}{delta\PYGZus{}th}
+\end{Verbatim}

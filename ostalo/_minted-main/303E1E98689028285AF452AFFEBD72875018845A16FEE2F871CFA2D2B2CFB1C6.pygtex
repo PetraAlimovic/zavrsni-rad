@@ -1,0 +1,5 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+        \PYG{n}{IF} \PYG{n}{Euclidean\PYGZus{}Distance}\PYG{p}{(}\PYG{n}{dx}\PYG{p}{,} \PYG{n}{dz}\PYG{p}{)} \PYG{o}{\PYGZlt{}} \PYG{n}{deadzone\PYGZus{}radius}\PYG{p}{:}
+            \PYG{n}{dx} \PYG{o}{=} \PYG{l+m+mf}{0.0}
+            \PYG{n}{dz} \PYG{o}{=} \PYG{l+m+mf}{0.0}
+\end{Verbatim}

@@ -1,0 +1,17 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+  \PYG{n}{function} \PYG{n}{Classify\PYGZus{}Gesture}\PYG{p}{(}\PYG{n}{landmarks\PYGZus{}2d}\PYG{p}{):}
+        \PYG{n}{palm\PYGZus{}center} \PYG{o}{=} \PYG{n}{Calculate\PYGZus{}Mean}\PYG{p}{(}\PYG{n}{landmarks\PYGZus{}2d}\PYG{p}{[}\PYG{l+m+mi}{5}\PYG{p}{,} \PYG{l+m+mi}{9}\PYG{p}{,} \PYG{l+m+mi}{13}\PYG{p}{,} \PYG{l+m+mi}{17}\PYG{p}{])}
+        \PYG{n}{curled\PYGZus{}fingers\PYGZus{}count} \PYG{o}{=} \PYG{l+m+mi}{0}
+
+        \PYG{n}{FOR} \PYG{n}{EACH} \PYG{n}{finger} \PYG{n}{IN} \PYG{p}{[}\PYG{n}{index}\PYG{p}{,} \PYG{n}{middle}\PYG{p}{,} \PYG{n}{ring}\PYG{p}{,} \PYG{n}{pinky}\PYG{p}{]:}
+            \PYG{n}{tip\PYGZus{}dist} \PYG{o}{=} \PYG{n}{Distance}\PYG{p}{(}\PYG{n}{finger}\PYG{o}{.}\PYG{n}{tip}\PYG{p}{,} \PYG{n}{palm\PYGZus{}center}\PYG{p}{)}
+            \PYG{n}{pip\PYGZus{}dist} \PYG{o}{=} \PYG{n}{Distance}\PYG{p}{(}\PYG{n}{finger}\PYG{o}{.}\PYG{n}{pip}\PYG{p}{,} \PYG{n}{palm\PYGZus{}center}\PYG{p}{)}
+
+            \PYG{n}{IF} \PYG{n}{tip\PYGZus{}dist} \PYG{o}{\PYGZlt{}} \PYG{n}{pip\PYGZus{}dist} \PYG{o}{*} \PYG{n}{FIST\PYGZus{}CURL\PYGZus{}THRESHOLD}\PYG{p}{:}
+                \PYG{n}{curled\PYGZus{}fingers\PYGZus{}count} \PYG{o}{+=} \PYG{l+m+mi}{1}
+
+        \PYG{n}{IF} \PYG{n}{curled\PYGZus{}fingers\PYGZus{}count} \PYG{o}{\PYGZgt{}=} \PYG{l+m+mi}{3}\PYG{p}{:}
+            \PYG{n}{RETURN} \PYG{l+s+s1}{\PYGZsq{}FIST\PYGZsq{}}
+        \PYG{n}{ELSE}\PYG{p}{:}
+            \PYG{n}{RETURN} \PYG{l+s+s1}{\PYGZsq{}OPEN\PYGZsq{}}
+\end{Verbatim}

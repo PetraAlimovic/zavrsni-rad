@@ -1,0 +1,7 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+  \PYG{n}{Render\PYGZus{}Dashboard\PYGZus{}Grid\PYGZus{}2x2}\PYG{p}{(}\PYG{n}{color\PYGZus{}frame}\PYG{p}{,} \PYG{n}{depth\PYGZus{}colormap}\PYG{p}{,} \PYG{n}{robot\PYGZus{}image}\PYG{p}{,} \PYG{n}{obstacle\PYGZus{}status}\PYG{p}{)}
+
+  \PYG{n}{key} \PYG{o}{=} \PYG{n}{Read\PYGZus{}Keyboard\PYGZus{}Input}\PYG{p}{()}
+  \PYG{n}{IF} \PYG{n}{key} \PYG{o}{==} \PYG{l+s+s1}{\PYGZsq{}C\PYGZsq{}}\PYG{p}{:} \PYG{n}{Start\PYGZus{}Calibration\PYGZus{}Timer}\PYG{p}{()}
+  \PYG{n}{IF} \PYG{n}{key} \PYG{o}{==} \PYG{l+s+s1}{\PYGZsq{}Q\PYGZsq{}}\PYG{p}{:} \PYG{n}{Shutdown\PYGZus{}Node}\PYG{p}{()}
+\end{Verbatim}

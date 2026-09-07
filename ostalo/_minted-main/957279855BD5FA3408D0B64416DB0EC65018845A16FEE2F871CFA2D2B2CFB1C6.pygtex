@@ -1,0 +1,7 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+  \PYG{n}{results} \PYG{o}{=} \PYG{n}{MediaPipe}\PYG{o}{.}\PYG{n}{process}\PYG{p}{(}\PYG{n}{color\PYGZus{}frame}\PYG{p}{)}
+  \PYG{n}{IF} \PYG{n}{hand} \PYG{n}{NOT} \PYG{n}{detected} \PYG{n}{OR} \PYG{n}{confidence} \PYG{o}{\PYGZlt{}} \PYG{n}{MIN\PYGZus{}CONFIDENCE}\PYG{p}{:}
+      \PYG{n}{Debounce\PYGZus{}Gesture}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}OPEN\PYGZsq{}}\PYG{p}{)}
+      \PYG{n}{Render\PYGZus{}Dashboard\PYGZus{}GUI}\PYG{p}{()}
+      \PYG{n}{RETURN}
+\end{Verbatim}

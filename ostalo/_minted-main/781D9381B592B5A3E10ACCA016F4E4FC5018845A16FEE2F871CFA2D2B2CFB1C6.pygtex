@@ -1,0 +1,13 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+        \PYG{n}{transform} \PYG{o}{=} \PYG{n}{TransformStamped}\PYG{p}{()}
+        \PYG{n}{transform}\PYG{o}{.}\PYG{n}{header}\PYG{o}{.}\PYG{n}{stamp}    \PYG{o}{=} \PYG{n}{current\PYGZus{}time}
+        \PYG{n}{transform}\PYG{o}{.}\PYG{n}{header}\PYG{o}{.}\PYG{n}{frame\PYGZus{}id} \PYG{o}{=} \PYG{l+s+s1}{\PYGZsq{}odom\PYGZsq{}}
+        \PYG{n}{transform}\PYG{o}{.}\PYG{n}{child\PYGZus{}frame\PYGZus{}id}  \PYG{o}{=} \PYG{l+s+s1}{\PYGZsq{}base\PYGZus{}footprint\PYGZsq{}}
+
+        \PYG{n}{transform}\PYG{o}{.}\PYG{n}{translation} \PYG{o}{=} \PYG{p}{(}\PYG{n}{state}\PYG{o}{.}\PYG{n}{x}\PYG{p}{,} \PYG{n}{state}\PYG{o}{.}\PYG{n}{y}\PYG{p}{,} \PYG{l+m+mf}{0.0}\PYG{p}{)}
+
+        \PYG{n}{transform}\PYG{o}{.}\PYG{n}{rotation}\PYG{o}{.}\PYG{n}{x} \PYG{o}{=} \PYG{l+m+mf}{0.0}
+        \PYG{n}{transform}\PYG{o}{.}\PYG{n}{rotation}\PYG{o}{.}\PYG{n}{y} \PYG{o}{=} \PYG{l+m+mf}{0.0}
+        \PYG{n}{transform}\PYG{o}{.}\PYG{n}{rotation}\PYG{o}{.}\PYG{n}{z} \PYG{o}{=} \PYG{n}{Sine}\PYG{p}{(}\PYG{n}{state}\PYG{o}{.}\PYG{n}{th} \PYG{o}{/} \PYG{l+m+mf}{2.0}\PYG{p}{)}
+        \PYG{n}{transform}\PYG{o}{.}\PYG{n}{rotation}\PYG{o}{.}\PYG{n}{w} \PYG{o}{=} \PYG{n}{Cosine}\PYG{p}{(}\PYG{n}{state}\PYG{o}{.}\PYG{n}{th} \PYG{o}{/} \PYG{l+m+mf}{2.0}\PYG{p}{)}
+\end{Verbatim}

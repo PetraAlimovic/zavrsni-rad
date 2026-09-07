@@ -1,0 +1,10 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+  \PYG{n}{function} \PYG{n}{Publish\PYGZus{}Zero\PYGZus{}Twist}\PYG{p}{():}
+        \PYG{n}{state}\PYG{o}{.}\PYG{n}{filtered\PYGZus{}linear\PYGZus{}x}  \PYG{o}{=} \PYG{l+m+mf}{0.0}
+        \PYG{n}{state}\PYG{o}{.}\PYG{n}{filtered\PYGZus{}angular\PYGZus{}z} \PYG{o}{=} \PYG{l+m+mf}{0.0}
+
+        \PYG{n}{msg} \PYG{o}{=} \PYG{n}{Twist}\PYG{p}{()}
+        \PYG{n}{msg}\PYG{o}{.}\PYG{n}{linear}\PYG{o}{.}\PYG{n}{x}  \PYG{o}{=} \PYG{l+m+mf}{0.0}
+        \PYG{n}{msg}\PYG{o}{.}\PYG{n}{angular}\PYG{o}{.}\PYG{n}{z} \PYG{o}{=} \PYG{l+m+mf}{0.0}
+        \PYG{n}{Publish}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}/cmd\PYGZus{}vel\PYGZus{}hand\PYGZsq{}}\PYG{p}{,} \PYG{n}{msg}\PYG{p}{)}
+\end{Verbatim}

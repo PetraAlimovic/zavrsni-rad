@@ -1,0 +1,18 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+  \PYG{k}{class} \PYG{n+nc}{DummyOdomNode}\PYG{p}{(}\PYG{n}{ROS2\PYGZus{}Node}\PYG{p}{):}
+
+    \PYG{n}{function} \PYG{n+nf+fm}{\PYGZus{}\PYGZus{}init\PYGZus{}\PYGZus{}}\PYG{p}{():}
+        \PYG{n}{Initialize} \PYG{n}{ROS} \PYG{l+m+mi}{2} \PYG{n}{node} \PYG{l+s+s2}{\PYGZdq{}dummy\PYGZus{}odom\PYGZus{}node\PYGZdq{}}
+
+        \PYG{n}{state} \PYG{o}{=} \PYG{p}{\PYGZob{}}
+            \PYG{l+s+s1}{\PYGZsq{}x\PYGZsq{}}\PYG{p}{:} \PYG{l+m+mf}{0.0}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}y\PYGZsq{}}\PYG{p}{:} \PYG{l+m+mf}{0.0}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}th\PYGZsq{}}\PYG{p}{:} \PYG{l+m+mf}{0.0}\PYG{p}{,}
+            \PYG{l+s+s1}{\PYGZsq{}vx\PYGZsq{}}\PYG{p}{:} \PYG{l+m+mf}{0.0}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}wz\PYGZsq{}}\PYG{p}{:} \PYG{l+m+mf}{0.0}
+        \PYG{p}{\PYGZcb{}}
+
+        \PYG{n}{last\PYGZus{}time} \PYG{o}{=} \PYG{n}{Current\PYGZus{}Time}\PYG{p}{()}
+
+        \PYG{n}{Create} \PYG{n}{Subscriber}\PYG{p}{:} \PYG{l+s+s1}{\PYGZsq{}/cmd\PYGZus{}vel\PYGZus{}hand\PYGZsq{}} \PYG{p}{(}\PYG{n}{Twist} \PYG{n}{message}\PYG{p}{)} \PYG{o}{\PYGZhy{}\PYGZgt{}} \PYG{n}{cmd\PYGZus{}vel\PYGZus{}callback}\PYG{p}{()}
+        \PYG{n}{Initialize} \PYG{n}{TransformBroadcaster} \PYG{p}{(}\PYG{n}{tf2\PYGZus{}ros}\PYG{p}{)}
+
+        \PYG{n}{Create} \PYG{n}{Timer}\PYG{p}{(}\PYG{l+m+mf}{0.05}\PYG{n}{s}\PYG{p}{)} \PYG{o}{\PYGZhy{}\PYGZgt{}} \PYG{n}{update\PYGZus{}and\PYGZus{}publish}\PYG{p}{()}
+\end{Verbatim}

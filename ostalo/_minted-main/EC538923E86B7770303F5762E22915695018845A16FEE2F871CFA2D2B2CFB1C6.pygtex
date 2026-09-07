@@ -1,0 +1,10 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+  \PYG{n}{function} \PYG{n}{publish\PYGZus{}latest\PYGZus{}state}\PYG{p}{():}
+        \PYG{n}{msg} \PYG{o}{=} \PYG{n}{HandPose}\PYG{p}{()}
+        \PYG{n}{msg}\PYG{o}{.}\PYG{n}{timestamp} \PYG{o}{=} \PYG{n}{Current\PYGZus{}Time}\PYG{p}{()}
+        \PYG{n}{msg}\PYG{o}{.}\PYG{n}{gesture}   \PYG{o}{=} \PYG{n}{state}\PYG{o}{.}\PYG{n}{confirmed\PYGZus{}gesture}
+        \PYG{n}{msg}\PYG{o}{.}\PYG{n}{confidence} \PYG{o}{=} \PYG{n}{state}\PYG{o}{.}\PYG{n}{latest\PYGZus{}confidence}
+        \PYG{n}{msg}\PYG{o}{.}\PYG{n}{position}  \PYG{o}{=} \PYG{n}{state}\PYG{o}{.}\PYG{n}{position\PYGZus{}3d} \PYG{n}{IF} \PYG{n}{valid} \PYG{n}{ELSE} \PYG{n}{state}\PYG{o}{.}\PYG{n}{last\PYGZus{}known\PYGZus{}position}
+
+        \PYG{n}{Publish}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}/hand\PYGZus{}pose\PYGZsq{}}\PYG{p}{,} \PYG{n}{msg}\PYG{p}{)}
+\end{Verbatim}

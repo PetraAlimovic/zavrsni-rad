@@ -1,0 +1,4 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+        \PYG{n}{norm\PYGZus{}forward} \PYG{o}{=} \PYG{n}{Clamp}\PYG{p}{(}\PYG{n}{dz} \PYG{o}{/} \PYG{n}{map\PYGZus{}range\PYGZus{}linear}\PYG{p}{,} \PYG{o}{\PYGZhy{}}\PYG{l+m+mf}{1.0}\PYG{p}{,} \PYG{l+m+mf}{1.0}\PYG{p}{)}
+        \PYG{n}{norm\PYGZus{}turn}    \PYG{o}{=} \PYG{n}{Clamp}\PYG{p}{(}\PYG{n}{dx} \PYG{o}{/} \PYG{n}{map\PYGZus{}range\PYGZus{}angular}\PYG{p}{,} \PYG{o}{\PYGZhy{}}\PYG{l+m+mf}{1.0}\PYG{p}{,} \PYG{l+m+mf}{1.0}\PYG{p}{)}
+\end{Verbatim}

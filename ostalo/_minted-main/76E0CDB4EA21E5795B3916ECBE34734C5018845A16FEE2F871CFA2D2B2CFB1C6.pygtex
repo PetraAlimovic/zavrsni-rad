@@ -1,0 +1,4 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+        \PYG{n}{state}\PYG{o}{.}\PYG{n}{filtered\PYGZus{}linear\PYGZus{}x}  \PYG{o}{=} \PYG{p}{(}\PYG{n}{smoothing\PYGZus{}alpha} \PYG{o}{*} \PYG{n}{target\PYGZus{}linear\PYGZus{}x}\PYG{p}{)} \PYG{o}{+} \PYG{p}{((}\PYG{l+m+mi}{1} \PYG{o}{\PYGZhy{}} \PYG{n}{smoothing\PYGZus{}alpha}\PYG{p}{)} \PYG{o}{*} \PYG{n}{state}\PYG{o}{.}\PYG{n}{filtered\PYGZus{}linear\PYGZus{}x}\PYG{p}{)}
+        \PYG{n}{state}\PYG{o}{.}\PYG{n}{filtered\PYGZus{}angular\PYGZus{}z} \PYG{o}{=} \PYG{p}{(}\PYG{n}{smoothing\PYGZus{}alpha} \PYG{o}{*} \PYG{n}{target\PYGZus{}angular\PYGZus{}z}\PYG{p}{)} \PYG{o}{+} \PYG{p}{((}\PYG{l+m+mi}{1} \PYG{o}{\PYGZhy{}} \PYG{n}{smoothing\PYGZus{}alpha}\PYG{p}{)} \PYG{o}{*} \PYG{n}{state}\PYG{o}{.}\PYG{n}{filtered\PYGZus{}angular\PYGZus{}z}\PYG{p}{)}
+\end{Verbatim}

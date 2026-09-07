@@ -1,0 +1,14 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+  \PYG{n}{function} \PYG{n}{publish\PYGZus{}velocity}\PYG{p}{():}
+        \PYG{n}{IF} \PYG{n}{state}\PYG{o}{.}\PYG{n}{neutral\PYGZus{}position} \PYG{o+ow}{is} \PYG{n}{NULL} \PYG{n}{OR} \PYG{n}{state}\PYG{o}{.}\PYG{n}{last\PYGZus{}msg\PYGZus{}time} \PYG{o+ow}{is} \PYG{n}{NULL}\PYG{p}{:}
+            \PYG{n}{Publish\PYGZus{}Zero\PYGZus{}Twist}\PYG{p}{()}
+            \PYG{n}{RETURN}
+
+        \PYG{n}{IF} \PYG{p}{(}\PYG{n}{Current\PYGZus{}Time}\PYG{p}{()} \PYG{o}{\PYGZhy{}} \PYG{n}{state}\PYG{o}{.}\PYG{n}{last\PYGZus{}msg\PYGZus{}time}\PYG{p}{)} \PYG{o}{\PYGZgt{}} \PYG{n}{tracking\PYGZus{}timeout}\PYG{p}{:}
+            \PYG{n}{Publish\PYGZus{}Zero\PYGZus{}Twist}\PYG{p}{()}
+            \PYG{n}{RETURN}
+
+        \PYG{n}{IF} \PYG{n}{state}\PYG{o}{.}\PYG{n}{latest\PYGZus{}gesture} \PYG{o}{!=} \PYG{l+s+s2}{\PYGZdq{}FIST\PYGZdq{}}\PYG{p}{:}
+            \PYG{n}{Publish\PYGZus{}Zero\PYGZus{}Twist}\PYG{p}{()}
+            \PYG{n}{RETURN}
+\end{Verbatim}

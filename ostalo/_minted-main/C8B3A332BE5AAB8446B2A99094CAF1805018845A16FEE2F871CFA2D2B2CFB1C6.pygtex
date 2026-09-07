@@ -1,0 +1,7 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{n}{function} \PYG{n}{camera\PYGZus{}loop}\PYG{p}{():}
+  \PYG{n}{color\PYGZus{}frame}\PYG{p}{,} \PYG{n}{depth\PYGZus{}frame} \PYG{o}{=} \PYG{n}{RealSense}\PYG{o}{.}\PYG{n}{get\PYGZus{}aligned\PYGZus{}frames}\PYG{p}{()}
+  \PYG{n}{IF} \PYG{n}{frames} \PYG{n}{are} \PYG{n}{invalid}\PYG{p}{:}
+      \PYG{n}{Debounce\PYGZus{}Gesture}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}OPEN\PYGZsq{}}\PYG{p}{)}
+      \PYG{n}{RETURN}
+\end{Verbatim}

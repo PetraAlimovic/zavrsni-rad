@@ -1,0 +1,7 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+        \PYG{n}{Create} \PYG{n}{Subscriber}\PYG{p}{:} \PYG{l+s+s1}{\PYGZsq{}/hand\PYGZus{}pose\PYGZsq{}}     \PYG{o}{\PYGZhy{}\PYGZgt{}} \PYG{n}{on\PYGZus{}hand\PYGZus{}pose\PYGZus{}received}\PYG{p}{()}
+        \PYG{n}{Create} \PYG{n}{Subscriber}\PYG{p}{:} \PYG{l+s+s1}{\PYGZsq{}/null\PYGZus{}position\PYGZsq{}} \PYG{o}{\PYGZhy{}\PYGZgt{}} \PYG{n}{on\PYGZus{}null\PYGZus{}position}\PYG{p}{()}
+        \PYG{n}{Create} \PYG{n}{Publisher}\PYG{p}{:}  \PYG{l+s+s1}{\PYGZsq{}/cmd\PYGZus{}vel\PYGZus{}hand\PYGZsq{}} \PYG{p}{(}\PYG{n}{Twist} \PYG{n}{message}\PYG{p}{)}
+
+        \PYG{n}{Create} \PYG{n}{Timer}\PYG{p}{(}\PYG{l+m+mi}{1} \PYG{o}{/} \PYG{n}{publish\PYGZus{}rate}\PYG{p}{)} \PYG{o}{\PYGZhy{}\PYGZgt{}} \PYG{n}{publish\PYGZus{}velocity}\PYG{p}{()}
+\end{Verbatim}

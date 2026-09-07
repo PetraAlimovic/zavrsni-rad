@@ -1,0 +1,7 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+  \PYG{n}{IF} \PYG{n}{calibration\PYGZus{}is\PYGZus{}active}\PYG{p}{:}
+      \PYG{n}{IF} \PYG{n}{elapsed\PYGZus{}time} \PYG{o}{\PYGZgt{}=} \PYG{n}{CALIBRATION\PYGZus{}DURATION}\PYG{p}{:}
+          \PYG{n}{state}\PYG{o}{.}\PYG{n}{null\PYGZus{}position} \PYG{o}{=} \PYG{n}{state}\PYG{o}{.}\PYG{n}{position\PYGZus{}3d}
+          \PYG{n}{Publish}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}/null\PYGZus{}position\PYGZsq{}}\PYG{p}{,} \PYG{n}{state}\PYG{o}{.}\PYG{n}{null\PYGZus{}position}\PYG{p}{)}
+          \PYG{n}{Stop\PYGZus{}Calibration}\PYG{p}{()}
+\end{Verbatim}

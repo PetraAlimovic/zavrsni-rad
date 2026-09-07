@@ -1,0 +1,5 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+  \PYG{n}{landmarks\PYGZus{}2d} \PYG{o}{=} \PYG{n}{results}\PYG{o}{.}\PYG{n}{multi\PYGZus{}hand\PYGZus{}landmarks}\PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{]}
+  \PYG{n}{raw\PYGZus{}gesture}  \PYG{o}{=} \PYG{n}{Classify\PYGZus{}Gesture}\PYG{p}{(}\PYG{n}{landmarks\PYGZus{}2d}\PYG{p}{)}
+  \PYG{n}{Debounce\PYGZus{}Gesture}\PYG{p}{(}\PYG{n}{raw\PYGZus{}gesture}\PYG{p}{)}
+\end{Verbatim}

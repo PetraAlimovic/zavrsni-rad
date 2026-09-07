@@ -1,0 +1,10 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+  \PYG{n}{function} \PYG{n}{on\PYGZus{}null\PYGZus{}position}\PYG{p}{(}\PYG{n}{msg}\PYG{p}{):}
+        \PYG{n}{state}\PYG{o}{.}\PYG{n}{neutral\PYGZus{}position} \PYG{o}{=} \PYG{n}{msg}\PYG{o}{.}\PYG{n}{position}
+
+
+    \PYG{n}{function} \PYG{n}{on\PYGZus{}hand\PYGZus{}pose\PYGZus{}received}\PYG{p}{(}\PYG{n}{msg}\PYG{p}{):}
+        \PYG{n}{state}\PYG{o}{.}\PYG{n}{last\PYGZus{}msg\PYGZus{}time}   \PYG{o}{=} \PYG{n}{Current\PYGZus{}Time}\PYG{p}{()}
+        \PYG{n}{state}\PYG{o}{.}\PYG{n}{latest\PYGZus{}hand\PYGZus{}pos} \PYG{o}{=} \PYG{n}{msg}\PYG{o}{.}\PYG{n}{position}
+        \PYG{n}{state}\PYG{o}{.}\PYG{n}{latest\PYGZus{}gesture}  \PYG{o}{=} \PYG{n}{msg}\PYG{o}{.}\PYG{n}{gesture}
+\end{Verbatim}

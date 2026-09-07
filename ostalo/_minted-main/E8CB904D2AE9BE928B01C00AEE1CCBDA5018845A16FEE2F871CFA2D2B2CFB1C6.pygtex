@@ -1,0 +1,5 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+  \PYG{n}{function} \PYG{n}{cmd\PYGZus{}vel\PYGZus{}callback}\PYG{p}{(}\PYG{n}{msg}\PYG{p}{):}
+        \PYG{n}{state}\PYG{o}{.}\PYG{n}{vx} \PYG{o}{=} \PYG{n}{msg}\PYG{o}{.}\PYG{n}{linear}\PYG{o}{.}\PYG{n}{x}
+        \PYG{n}{state}\PYG{o}{.}\PYG{n}{wz} \PYG{o}{=} \PYG{n}{msg}\PYG{o}{.}\PYG{n}{angular}\PYG{o}{.}\PYG{n}{z}
+\end{Verbatim}

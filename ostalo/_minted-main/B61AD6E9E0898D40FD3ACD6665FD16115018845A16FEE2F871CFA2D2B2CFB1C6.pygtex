@@ -1,0 +1,5 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+  \PYG{n}{landmarks\PYGZus{}3d} \PYG{o}{=} \PYG{n}{Deproject\PYGZus{}2D\PYGZus{}to\PYGZus{}3D}\PYG{p}{(}\PYG{n}{landmarks\PYGZus{}2d}\PYG{p}{,} \PYG{n}{depth\PYGZus{}frame}\PYG{p}{,} \PYG{n}{camera\PYGZus{}intrinsics}\PYG{p}{)}
+  \PYG{n}{palm\PYGZus{}center}  \PYG{o}{=} \PYG{n}{Compute\PYGZus{}Mean\PYGZus{}3D\PYGZus{}Position}\PYG{p}{(}\PYG{n}{landmarks\PYGZus{}3d}\PYG{p}{[}\PYG{n}{knuckles}\PYG{p}{])}
+  \PYG{n}{state}\PYG{o}{.}\PYG{n}{position\PYGZus{}3d} \PYG{o}{=} \PYG{n}{palm\PYGZus{}center}
+\end{Verbatim}

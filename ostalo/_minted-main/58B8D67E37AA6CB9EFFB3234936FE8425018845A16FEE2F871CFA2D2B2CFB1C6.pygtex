@@ -1,0 +1,4 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+        \PYG{n}{dx} \PYG{o}{=} \PYG{n}{state}\PYG{o}{.}\PYG{n}{latest\PYGZus{}hand\PYGZus{}pos}\PYG{o}{.}\PYG{n}{x} \PYG{o}{\PYGZhy{}} \PYG{n}{state}\PYG{o}{.}\PYG{n}{neutral\PYGZus{}position}\PYG{o}{.}\PYG{n}{x}
+        \PYG{n}{dz} \PYG{o}{=} \PYG{n}{state}\PYG{o}{.}\PYG{n}{neutral\PYGZus{}position}\PYG{o}{.}\PYG{n}{z} \PYG{o}{\PYGZhy{}} \PYG{n}{state}\PYG{o}{.}\PYG{n}{latest\PYGZus{}hand\PYGZus{}pos}\PYG{o}{.}\PYG{n}{z}
+\end{Verbatim}

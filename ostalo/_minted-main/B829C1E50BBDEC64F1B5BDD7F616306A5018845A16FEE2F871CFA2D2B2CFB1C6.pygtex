@@ -1,0 +1,45 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+  \PYG{k}{def} \PYG{n+nf}{generate\PYGZus{}launch\PYGZus{}description}\PYG{p}{():}
+
+    \PYG{n}{twist\PYGZus{}mux\PYGZus{}config} \PYG{o}{=} \PYG{n}{os}\PYG{o}{.}\PYG{n}{path}\PYG{o}{.}\PYG{n}{join}\PYG{p}{(}
+        \PYG{n}{get\PYGZus{}package\PYGZus{}share\PYGZus{}directory}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}astro\PYGZsq{}}\PYG{p}{),}
+        \PYG{l+s+s1}{\PYGZsq{}config\PYGZsq{}}\PYG{p}{,}
+        \PYG{l+s+s1}{\PYGZsq{}twist\PYGZus{}mux.yaml\PYGZsq{}}
+    \PYG{p}{)}
+
+    \PYG{k}{return} \PYG{n}{LaunchDescription}\PYG{p}{([}
+
+        \PYG{n}{Node}\PYG{p}{(}
+            \PYG{n}{package}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}hand\PYGZus{}teleop\PYGZsq{}}\PYG{p}{,}
+            \PYG{n}{executable}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}hand\PYGZus{}capture\PYGZus{}node\PYGZsq{}}\PYG{p}{,}
+            \PYG{n}{name}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}hand\PYGZus{}capture\PYGZus{}node\PYGZsq{}}\PYG{p}{,}
+            \PYG{n}{output}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}screen\PYGZsq{}}\PYG{p}{,}
+        \PYG{p}{),}
+
+        \PYG{n}{Node}\PYG{p}{(}
+            \PYG{n}{package}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}hand\PYGZus{}teleop\PYGZsq{}}\PYG{p}{,}
+            \PYG{n}{executable}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}hand\PYGZus{}teleop\PYGZus{}node\PYGZsq{}}\PYG{p}{,}
+            \PYG{n}{name}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}hand\PYGZus{}teleop\PYGZus{}node\PYGZsq{}}\PYG{p}{,}
+            \PYG{n}{output}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}screen\PYGZsq{}}\PYG{p}{,}
+            \PYG{n}{parameters}\PYG{o}{=}\PYG{p}{[\PYGZob{}}
+                \PYG{l+s+s1}{\PYGZsq{}deadzone\PYGZus{}radius\PYGZsq{}}   \PYG{p}{:} \PYG{l+m+mf}{0.03}\PYG{p}{,}
+                \PYG{l+s+s1}{\PYGZsq{}max\PYGZus{}linear\PYGZus{}speed\PYGZsq{}}  \PYG{p}{:} \PYG{l+m+mf}{1.0}\PYG{p}{,}
+                \PYG{l+s+s1}{\PYGZsq{}max\PYGZus{}angular\PYGZus{}speed\PYGZsq{}} \PYG{p}{:} \PYG{l+m+mf}{1.0}\PYG{p}{,}
+                \PYG{l+s+s1}{\PYGZsq{}map\PYGZus{}range\PYGZus{}linear\PYGZsq{}}  \PYG{p}{:} \PYG{l+m+mf}{0.20}\PYG{p}{,}
+                \PYG{l+s+s1}{\PYGZsq{}map\PYGZus{}range\PYGZus{}angular\PYGZsq{}} \PYG{p}{:} \PYG{l+m+mf}{0.20}\PYG{p}{,}
+                \PYG{l+s+s1}{\PYGZsq{}smoothing\PYGZus{}alpha\PYGZsq{}}   \PYG{p}{:} \PYG{l+m+mf}{0.3}\PYG{p}{,}
+                \PYG{l+s+s1}{\PYGZsq{}tracking\PYGZus{}timeout\PYGZsq{}}  \PYG{p}{:} \PYG{l+m+mf}{0.4}\PYG{p}{,}
+                \PYG{l+s+s1}{\PYGZsq{}publish\PYGZus{}rate\PYGZsq{}}      \PYG{p}{:} \PYG{l+m+mf}{20.0}\PYG{p}{,}
+            \PYG{p}{\PYGZcb{}]}
+        \PYG{p}{),}
+
+        \PYG{n}{Node}\PYG{p}{(}
+            \PYG{n}{package}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}twist\PYGZus{}mux\PYGZsq{}}\PYG{p}{,}
+            \PYG{n}{executable}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}twist\PYGZus{}mux\PYGZsq{}}\PYG{p}{,}
+            \PYG{n}{name}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}twist\PYGZus{}mux\PYGZsq{}}\PYG{p}{,}
+            \PYG{n}{output}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}screen\PYGZsq{}}\PYG{p}{,}
+            \PYG{n}{parameters}\PYG{o}{=}\PYG{p}{[}\PYG{n}{twist\PYGZus{}mux\PYGZus{}config}\PYG{p}{],}
+            \PYG{n}{remappings}\PYG{o}{=}\PYG{p}{[(}\PYG{l+s+s1}{\PYGZsq{}/cmd\PYGZus{}vel\PYGZus{}out\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}/cmd\PYGZus{}vel\PYGZsq{}}\PYG{p}{)],}
+        \PYG{p}{),}
+    \PYG{p}{])}
+\end{Verbatim}

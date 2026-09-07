@@ -1,0 +1,6 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{n}{Create} \PYG{n}{Publisher}\PYG{p}{:} \PYG{l+s+s1}{\PYGZsq{}/hand\PYGZus{}pose\PYGZsq{}} \PYG{p}{(}\PYG{n}{HandPose} \PYG{n}{message}\PYG{p}{)}
+\PYG{n}{Create} \PYG{n}{Publisher}\PYG{p}{:} \PYG{l+s+s1}{\PYGZsq{}/null\PYGZus{}position\PYGZsq{}} \PYG{p}{(}\PYG{n}{Point} \PYG{n}{message}\PYG{p}{)}
+\PYG{n}{Create} \PYG{n}{Subscriber}\PYG{p}{:} \PYG{l+s+s1}{\PYGZsq{}/camera/color/image\PYGZus{}raw/compressed\PYGZsq{}} \PYG{o}{\PYGZhy{}\PYGZgt{}} \PYG{n}{robot\PYGZus{}camera\PYGZus{}callback}\PYG{p}{()}
+\PYG{n}{Create} \PYG{n}{Subscriber}\PYG{p}{:} \PYG{l+s+s1}{\PYGZsq{}/obstacle\PYGZus{}status\PYGZsq{}}                  \PYG{o}{\PYGZhy{}\PYGZgt{}} \PYG{n}{obstacle\PYGZus{}status\PYGZus{}callback}\PYG{p}{()}
+\end{Verbatim}

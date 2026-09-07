@@ -1,0 +1,21 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+  \PYG{k}{class} \PYG{n+nc}{HandTeleopNode}\PYG{p}{(}\PYG{n}{ROS2\PYGZus{}Node}\PYG{p}{):}
+
+    \PYG{n}{function} \PYG{n+nf+fm}{\PYGZus{}\PYGZus{}init\PYGZus{}\PYGZus{}}\PYG{p}{():}
+        \PYG{n}{Initialize} \PYG{n}{ROS} \PYG{l+m+mi}{2} \PYG{n}{node} \PYG{l+s+s2}{\PYGZdq{}hand\PYGZus{}teleop\PYGZus{}node\PYGZdq{}}
+
+        \PYG{n}{Declare} \PYG{o+ow}{and} \PYG{n}{Load} \PYG{n}{Parameters}\PYG{p}{:}
+            \PYG{o}{\PYGZhy{}} \PYG{n}{deadzone\PYGZus{}radius}\PYG{p}{,} \PYG{n}{max\PYGZus{}linear\PYGZus{}speed}\PYG{p}{,} \PYG{n}{max\PYGZus{}angular\PYGZus{}speed}
+            \PYG{o}{\PYGZhy{}} \PYG{n}{map\PYGZus{}range\PYGZus{}linear}\PYG{p}{,} \PYG{n}{map\PYGZus{}range\PYGZus{}angular}
+            \PYG{o}{\PYGZhy{}} \PYG{n}{smoothing\PYGZus{}alpha} \PYG{p}{(}\PYG{n}{EMA} \PYG{n+nb}{filter} \PYG{n}{coefficient}\PYG{p}{)}
+            \PYG{o}{\PYGZhy{}} \PYG{n}{tracking\PYGZus{}timeout}\PYG{p}{,} \PYG{n}{publish\PYGZus{}rate} \PYG{p}{(}\PYG{l+m+mi}{20} \PYG{n}{Hz}\PYG{p}{)}
+
+        \PYG{n}{state} \PYG{o}{=} \PYG{p}{\PYGZob{}}
+            \PYG{l+s+s1}{\PYGZsq{}neutral\PYGZus{}position\PYGZsq{}}\PYG{p}{:} \PYG{n}{NULL}\PYG{p}{,}
+            \PYG{l+s+s1}{\PYGZsq{}latest\PYGZus{}hand\PYGZus{}pos\PYGZsq{}}\PYG{p}{:} \PYG{n}{NULL}\PYG{p}{,}
+            \PYG{l+s+s1}{\PYGZsq{}latest\PYGZus{}gesture\PYGZsq{}}\PYG{p}{:} \PYG{l+s+s2}{\PYGZdq{}OPEN\PYGZdq{}}\PYG{p}{,}
+            \PYG{l+s+s1}{\PYGZsq{}last\PYGZus{}msg\PYGZus{}time\PYGZsq{}}\PYG{p}{:} \PYG{n}{NULL}\PYG{p}{,}
+            \PYG{l+s+s1}{\PYGZsq{}filtered\PYGZus{}linear\PYGZus{}x\PYGZsq{}}\PYG{p}{:} \PYG{l+m+mf}{0.0}\PYG{p}{,}
+            \PYG{l+s+s1}{\PYGZsq{}filtered\PYGZus{}angular\PYGZus{}z\PYGZsq{}}\PYG{p}{:} \PYG{l+m+mf}{0.0}
+        \PYG{p}{\PYGZcb{}}
+\end{Verbatim}
