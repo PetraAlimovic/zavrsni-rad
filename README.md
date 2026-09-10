@@ -196,4 +196,3 @@ Petra Alimović
 ## Završni rad
 
 Ovaj workspace izrađen je u sklopu završnog rada na Fakultetu strojarstva i brodogradnje, Sveučilište u Zagrebu.
-```
