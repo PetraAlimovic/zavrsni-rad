@@ -76,30 +76,25 @@ Tamo su navedeni svi koraci za instalaciju SDK-a, Python bindinga i potrebnih ud
 
 ## Instalacija
 
-### 1. Napravite workspace
-
-Ako workspace još ne postoji, napravite direktorij i `src` mapu:
+### 1. Klonirajte astro_ws/
 
 ```bash
-mkdir -p ~/astro_ws/src
-cd ~/astro_ws/src
+git clone https://github.com/PetraAlimovic/zavrsni-rad.git
 ```
 
-### 2. Klonirajte repozitorije
+### 2. Klonirajte ASTRO repozitorij
 
 U `src` mapu klonirajte:
 
-- svoj repozitorij
 - ASTRO repozitorij s CRTA laboratorija
 
 Primjer:
 
 ```bash
-git clone https://github.com/PetraAlimovic/zavrsni-rad.git
-git clone <URL_CRTA_ASTRO_REPOZITORIJA>
+cd astro_ws/
+cd src/
+git clone https://github.com/CRTA-Lab/ASTRO
 ```
-
-> Napomena: URL ASTRO repozitorija zamijenite stvarnim URL-om CRTA laboratorija.
 
 Nakon kloniranja u `src` direktoriju trebali biste imati potrebne pakete za build.
 
@@ -147,7 +142,7 @@ Pokretanje:
 ros2 launch hand_teleop hand_teleop.launch.py
 ```
 
-Ako koristiš vlastitu konfiguraciju ili drugi naziv paketa, prilagodi naredbu prema strukturi workspacea.
+Ako koristite vlastitu konfiguraciju ili drugi naziv paketa, prilagodite naredbu prema strukturi workspacea.
 
 ---
 
