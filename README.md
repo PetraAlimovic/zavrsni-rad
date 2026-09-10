@@ -185,7 +185,7 @@ Sadrži prilagođene ROS 2 poruke korištene u sustavu, primjerice poruku za pol
 
 - Intel RealSense SDK / librealsense: https://github.com/IntelRealSense/librealsense
 - ROS 2 Humble dokumentacija: https://docs.ros.org/en/humble/
-- CRTA laboratorij ASTRO repozitorij: <URL_CRTA_ASTRO_REPOZITORIJA>
+- CRTA laboratorij ASTRO repozitorij: https://github.com/CRTA-Lab/ASTRO
 
 ---
 
